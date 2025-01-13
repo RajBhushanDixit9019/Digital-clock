@@ -1,0 +1,126 @@
+/* General body styles for themes */
+body.bg-dark {
+    background: #121212;
+    color: #ffffff;
+  }
+  
+  body.bg-light {
+    background: #f8f9fa;
+    color: #212529;
+  }
+  
+  body.bg-retro {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1%, transparent 1%),
+                      radial-gradient(circle, rgba(255, 255, 255, 0.05) 1%, transparent 1%);
+    background-color: #000;
+    color: #ff6b6b;
+  }
+  
+  body.bg-ocean {
+    background: #1e3c72; /* Deep Ocean Blue */
+    color: #f0f8ff; /* Alice Blue */
+  }
+  
+  body.bg-sunset {
+    background: #ff7e5f; /* Sunset Orange */
+    color: #fff3e0; /* Light Peach */
+  }
+  
+  body.bg-cyberpunk {
+    background: #2a2a72; /* Dark Cyberpunk Blue */
+    color: #ff00ff; /* Neon Pink */
+  }
+  
+  /* Prevent movement when changing themes */
+  body {
+    min-height: 100vh;  /* Ensures the body occupies at least 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Retro-specific styles */
+  #clock {
+    text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b;
+    white-space: nowrap; /* Prevent wrapping */
+    font-size: 4rem; /* Ensure large font size */
+    letter-spacing: 0.1em; /* Add spacing between characters */
+    
+  }
+  
+  /* Ocean Theme */
+  body.bg-ocean #clock {
+    text-shadow: 0 0 10px #f0f8ff, 0 0 20px #f0f8ff;
+  }
+  
+  /* Sunset Theme */
+  body.bg-sunset #clock {
+    text-shadow: 0 0 10px #ff7e5f, 0 0 20px #ff7e5f;
+  }
+  
+  /* Cyberpunk Theme */
+  body.bg-cyberpunk #clock {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+  
+  .card {
+    border-width: 3px;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Smooth transition between themes */
+  }
+  
+  .card-title {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Customize for each theme */
+  body.bg-ocean .card {
+    border-color: #00b4d8; /* Ocean Blue Border */
+  }
+  
+  body.bg-sunset .card {
+    border-color: #ff7e5f; /* Sunset Orange Border */
+  }
+  
+  body.bg-cyberpunk .card {
+    border-color: #ff00ff; /* Neon Pink Border */
+  }
+  
+  .display-1 {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.1em;
+    text-align: center; /* Center the time text */
+  }
+  
+  /* Center alignment for theme selector */
+  select {
+    min-width: 150px;
+  }
+  
+  /* Prevent movement and ensure content stays centered */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures the content remains centered */
+  }
+  
+  /* Buttons */
+  button {
+    transition: all 0.3s ease;
+  }
+  
+  body.bg-ocean button {
+    background-color: #00b4d8;
+    color: #fff;
+  }
+  
+  body.bg-sunset button {
+    background-color: #ff7e5f;
+    color: #fff;
+  }
+  
+  body.bg-cyberpunk button {
+    background-color: #ff00ff;
+    color: #fff;
+  }
+  
